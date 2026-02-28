@@ -1,50 +1,50 @@
 //
-//  WardrobeView.swift
+//  GardeningPlaceholderView.swift
 //  LittleDays
 //
-//  衣橱视图
+//  花园模块占位视图
 //
 
 import SwiftUI
 
-struct WardrobeView: View {
+struct GardeningPlaceholderView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
                 // 标题区域
                 VStack(spacing: 12) {
-                    Image(systemName: "tshirt.fill")
+                    Image(systemName: "leaf.fill")
                         .font(.system(size: 80))
-                        .foregroundColor(.sunlightOrange)
+                        .foregroundColor(.forestGreen)
 
-                    Text("衣橱模块")
+                    Text("小花园")
                         .font(.title)
                         .foregroundColor(.forestGreen)
 
-                    Text("功能开发中，敬请期待...")
+                    Text("功能即将上线，敬请期待...")
                         .font(.subheadline)
                         .foregroundColor(.softGray)
                 }
                 .padding(.top, 60)
 
-                // 功能预告卡片
+                // 功能预告
                 VStack(alignment: .leading, spacing: 16) {
                     featureItem(
-                        icon: "camera.fill",
-                        title: "拍照录入",
-                        description: "拍照或选择照片，自动识别衣服属性"
+                        icon: "camera.macro",
+                        title: "植物记录",
+                        description: "记录每一株植物的成长历程"
                     )
 
                     featureItem(
-                        icon: "sparkles",
-                        title: "智能分类",
-                        description: "按类型、颜色、风格自动整理"
+                        icon: "drop.fill",
+                        title: "浇水提醒",
+                        description: "智能提醒，不忘记照顾每一株"
                     )
 
                     featureItem(
-                        icon: "wand.and.stars",
-                        title: "穿搭推荐",
-                        description: "根据场景智能搭配，今日穿搭不纠结"
+                        icon: "calendar",
+                        title: "成长日记",
+                        description: "记录开花、换盆等重要时刻"
                     )
                 }
                 .padding(.horizontal, 24)
@@ -67,7 +67,6 @@ struct WardrobeView: View {
                 Text(description)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
-                    .lineLimit(nil)
             }
         }
         .padding()
@@ -78,5 +77,5 @@ struct WardrobeView: View {
 }
 
 #Preview {
-    WardrobeView()
+    GardeningPlaceholderView()
 }

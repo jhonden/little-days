@@ -1,50 +1,50 @@
 //
-//  WardrobeView.swift
+//  DiaryPlaceholderView.swift
 //  LittleDays
 //
-//  衣橱视图
+//  手账模块占位视图
 //
 
 import SwiftUI
 
-struct WardrobeView: View {
+struct DiaryPlaceholderView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
                 // 标题区域
                 VStack(spacing: 12) {
-                    Image(systemName: "tshirt.fill")
+                    Image(systemName: "book.fill")
                         .font(.system(size: 80))
                         .foregroundColor(.sunlightOrange)
 
-                    Text("衣橱模块")
+                    Text("手账本")
                         .font(.title)
                         .foregroundColor(.forestGreen)
 
-                    Text("功能开发中，敬请期待...")
+                    Text("功能即将上线，敬请期待...")
                         .font(.subheadline)
                         .foregroundColor(.softGray)
                 }
                 .padding(.top, 60)
 
-                // 功能预告卡片
+                // 功能预告
                 VStack(alignment: .leading, spacing: 16) {
                     featureItem(
-                        icon: "camera.fill",
-                        title: "拍照录入",
-                        description: "拍照或选择照片，自动识别衣服属性"
+                        icon: "heart.fill",
+                        title: "每日心情",
+                        description: "记录每一天的心情和感受"
                     )
 
                     featureItem(
-                        icon: "sparkles",
-                        title: "智能分类",
-                        description: "按类型、颜色、风格自动整理"
+                        icon: "photo.stack",
+                        title: "照片墙",
+                        description: "收藏美好瞬间，回顾回忆"
                     )
 
                     featureItem(
-                        icon: "wand.and.stars",
-                        title: "穿搭推荐",
-                        description: "根据场景智能搭配，今日穿搭不纠结"
+                        icon: "star.fill",
+                        title: "重要日子",
+                        description: "纪念日提醒，不错过重要时刻"
                     )
                 }
                 .padding(.horizontal, 24)
@@ -67,7 +67,6 @@ struct WardrobeView: View {
                 Text(description)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
-                    .lineLimit(nil)
             }
         }
         .padding()
@@ -78,5 +77,5 @@ struct WardrobeView: View {
 }
 
 #Preview {
-    WardrobeView()
+    DiaryPlaceholderView()
 }

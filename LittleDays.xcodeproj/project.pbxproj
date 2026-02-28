@@ -14,6 +14,12 @@
 		A10000090000000000000001 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000100000000000000001 /* AppModule.swift */; };
 		A10000110000000000000001 /* ClothingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000120000000000000001 /* ClothingModels.swift */; };
 		A10000130000000000000001 /* AIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000140000000000000001 /* AIRepository.swift */; };
+		A10000150000000000000001 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000160000000000000001 /* ColorExtension.swift */; };
+		A10000170000000000000001 /* AppConfigModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000180000000000000001 /* AppConfigModels.swift */; };
+		A10000190000000000000001 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000200000000000000001 /* CustomTabBar.swift */; };
+		A10000210000000000000001 /* SettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000220000000000000001 /* SettingsPanel.swift */; };
+		A10000230000000000000001 /* GardeningPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000240000000000000001 /* GardeningPlaceholderView.swift */; };
+		A10000250000000000000001 /* DiaryPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000260000000000000001 /* DiaryPlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +30,18 @@
 		A10000100000000000000001 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		A10000120000000000000001 /* ClothingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingModels.swift; sourceTree = "<group>"; };
 		A10000140000000000000001 /* AIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRepository.swift; sourceTree = "<group>"; };
-		A10000150000000000000001 /* LittleDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000170000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000160000000000000001 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		A10000180000000000000001 /* AppConfigModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModels.swift; sourceTree = "<group>"; };
+		A10000200000000000000001 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		A10000220000000000000001 /* SettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPanel.swift; sourceTree = "<group>"; };
+		A10000240000000000000001 /* GardeningPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardeningPlaceholderView.swift; sourceTree = "<group>"; };
+		A10000260000000000000001 /* DiaryPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPlaceholderView.swift; sourceTree = "<group>"; };
+		A10000270000000000000001 /* LittleDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000280000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A10000180000000000000001 /* Frameworks */ = {
+		A10000290000000000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,70 +51,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A10000190000000000000001 = {
+		A10000300000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				A10000200000000000000001 /* LittleDays */,
-				A10000210000000000000001 /* Products */,
+				A10000310000000000000001 /* LittleDays */,
+				A10000320000000000000001 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A10000200000000000000001 /* LittleDays */ = {
+		A10000310000000000000001 /* LittleDays */ = {
 			isa = PBXGroup;
 			children = (
-				A10000170000000000000001 /* Assets.xcassets */,
-				A10000220000000000000001 /* LittleDays */,
+				A10000280000000000000001 /* Assets.xcassets */,
+				A10000330000000000000001 /* LittleDays */,
 			);
 			path = LittleDays;
 			sourceTree = "<group>";
 		};
-		A10000210000000000000001 /* Products */ = {
+		A10000320000000000000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A10000150000000000000001 /* LittleDays.app */,
+				A10000270000000000000001 /* LittleDays.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A10000220000000000000001 /* LittleDays */ = {
+		A10000330000000000000001 /* LittleDays */ = {
 			isa = PBXGroup;
 			children = (
 				A10000020000000000000001 /* LittleDaysApp.swift */,
-				A10000230000000000000001 /* Views */,
-				A10000240000000000000001 /* Wardrobe */,
-				A10000250000000000000001 /* Shared */,
+				A10000340000000000000001 /* Views */,
+				A10000350000000000000001 /* Wardrobe */,
+				A10000360000000000000001 /* Shared */,
+				A10000370000000000000001 /* Gardening */,
+				A10000380000000000000001 /* Diary */,
 			);
 			path = LittleDays;
 			sourceTree = "<group>";
 		};
-		A10000230000000000000001 /* Views */ = {
+		A10000340000000000000001 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A10000390000000000000001 /* Components */,
 				A10000040000000000000001 /* MainTabView.swift */,
 				A10000080000000000000001 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A10000240000000000000001 /* Wardrobe */ = {
+		A10000350000000000000001 /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
 				A10000060000000000000001 /* WardrobeView.swift */,
-				A10000260000000000000001 /* Models */,
-				A10000270000000000000001 /* Services */,
+				A10000400000000000000001 /* Models */,
+				A10000410000000000000001 /* Services */,
 			);
 			path = Wardrobe;
 			sourceTree = "<group>";
 		};
-		A10000250000000000000001 /* Shared */ = {
+		A10000360000000000000001 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A10000280000000000000001 /* Models */,
+				A10000420000000000000001 /* Models */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		A10000260000000000000001 /* Models */ = {
+		A10000370000000000000001 /* Gardening */ = {
+			isa = PBXGroup;
+			children = (
+				A10000240000000000000001 /* GardeningPlaceholderView.swift */,
+			);
+			path = Gardening;
+			sourceTree = "<group>";
+		};
+		A10000380000000000000001 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				A10000260000000000000001 /* DiaryPlaceholderView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		A10000390000000000000001 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A10000200000000000000001 /* CustomTabBar.swift */,
+				A10000220000000000000001 /* SettingsPanel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A10000400000000000000001 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A10000120000000000000001 /* ClothingModels.swift */,
@@ -110,7 +150,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A10000270000000000000001 /* Services */ = {
+		A10000410000000000000001 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				A10000140000000000000001 /* AIRepository.swift */,
@@ -118,10 +158,12 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A10000280000000000000001 /* Models */ = {
+		A10000420000000000000001 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A10000100000000000000001 /* AppModule.swift */,
+				A10000160000000000000001 /* ColorExtension.swift */,
+				A10000180000000000000001 /* AppConfigModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,13 +171,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A10000290000000000000001 /* LittleDays */ = {
+		A10000430000000000000001 /* LittleDays */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A10000300000000000000001 /* Build configuration list for PBXNativeTarget "LittleDays" */;
+			buildConfigurationList = A10000440000000000000001 /* Build configuration list for PBXNativeTarget "LittleDays" */;
 			buildPhases = (
-				A10000310000000000000001 /* Sources */,
-				A10000180000000000000001 /* Frameworks */,
-				A10000320000000000000001 /* Resources */,
+				A10000450000000000000001 /* Sources */,
+				A10000290000000000000001 /* Frameworks */,
+				A10000460000000000000001 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -143,25 +185,25 @@
 			);
 			name = LittleDays;
 			productName = LittleDays;
-			productReference = A10000150000000000000001 /* LittleDays.app */;
+			productReference = A10000270000000000000001 /* LittleDays.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A10000330000000000000001 /* Project object */ = {
+		A10000470000000000000001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A10000290000000000000001 = {
+					A10000430000000000000001 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A10000340000000000000001 /* Build configuration list for PBXProject "LittleDays" */;
+			buildConfigurationList = A10000480000000000000001 /* Build configuration list for PBXProject "LittleDays" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,18 +211,18 @@
 				en,
 				Base,
 			);
-			mainGroup = A10000190000000000000001;
-			productRefGroup = A10000210000000000000001 /* Products */;
+			mainGroup = A10000300000000000000001;
+			productRefGroup = A10000320000000000000001 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A10000290000000000000001 /* LittleDays */,
+				A10000430000000000000001 /* LittleDays */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A10000320000000000000001 /* Resources */ = {
+		A10000460000000000000001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,7 +232,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A10000310000000000000001 /* Sources */ = {
+		A10000450000000000000001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,13 +243,19 @@
 				A10000090000000000000001 /* AppModule.swift in Sources */,
 				A10000110000000000000001 /* ClothingModels.swift in Sources */,
 				A10000130000000000000001 /* AIRepository.swift in Sources */,
+				A10000150000000000000001 /* ColorExtension.swift in Sources */,
+				A10000170000000000000001 /* AppConfigModels.swift in Sources */,
+				A10000190000000000000001 /* CustomTabBar.swift in Sources */,
+				A10000210000000000000001 /* SettingsPanel.swift in Sources */,
+				A10000230000000000000001 /* GardeningPlaceholderView.swift in Sources */,
+				A10000250000000000000001 /* DiaryPlaceholderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A10000350000000000000001 /* Debug */ = {
+		A10000490000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +318,7 @@
 			};
 			name = Debug;
 		};
-		A10000360000000000000001 /* Release */ = {
+		A10000500000000000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -326,14 +374,14 @@
 			};
 			name = Release;
 		};
-		A10000370000000000000001 /* Debug */ = {
+		A10000510000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3MKQ99U29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,14 +402,14 @@
 			};
 			name = Debug;
 		};
-		A10000380000000000000001 /* Release */ = {
+		A10000520000000000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3MKQ99U29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -385,25 +433,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A10000300000000000000001 /* Build configuration list for PBXNativeTarget "LittleDays" */ = {
+		A10000440000000000000001 /* Build configuration list for PBXNativeTarget "LittleDays" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000370000000000000001 /* Debug */,
-				A10000380000000000000001 /* Release */,
+				A10000510000000000000001 /* Debug */,
+				A10000520000000000000001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A10000340000000000000001 /* Build configuration list for PBXProject "LittleDays" */ = {
+		A10000480000000000000001 /* Build configuration list for PBXProject "LittleDays" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000350000000000000001 /* Debug */,
-				A10000360000000000000001 /* Release */,
+				A10000490000000000000001 /* Debug */,
+				A10000500000000000000001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A10000330000000000000001 /* Project object */;
+	rootObject = A10000470000000000000001 /* Project object */;
 }
