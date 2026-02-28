@@ -15,17 +15,23 @@ struct SettingsPanel: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // 顶部收起按钮
+            // 用户头像区域
             HStack {
-                Button(action: {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                        isVisible = false
-                    }
-                }) {
-                    Image(systemName: "sidebar.left")
-                        .font(.system(size: 20))
+                // 头像
+                Image(systemName: "person.crop.circle.fill")
+                    .font(.system(size: 40))
+                    .foregroundColor(.white.opacity(0.9))
+
+                // 用户信息
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("用户")
+                        .font(.headline)
                         .foregroundColor(.white)
+                    Text("点击登录")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.7))
                 }
+
                 Spacer()
             }
             .padding()

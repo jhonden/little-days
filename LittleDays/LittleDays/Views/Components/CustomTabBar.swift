@@ -12,29 +12,35 @@ struct CustomTabBar: View {
     @Binding var selectedTab: Int
 
     var body: some View {
-        HStack(spacing: 0) {
-            ForEach(AppTab.allCases, id: \.rawValue) { tab in
-                let config = tab.config
-                TabBarButton(
-                    title: config.title,
-                    icon: config.icon,
-                    tag: tab.rawValue,
-                    isSelected: selectedTab == tab.rawValue,
-                    isEnabled: config.isEnabled,
-                    action: {
-                        if config.isEnabled {
-                            withAnimation(.spring()) {
-                                selectedTab = tab.rawValue
+        VStack(spacing: 0) {
+            // 上边缘分隔线
+            Rectangle()
+                .fill(Color.forestGreen.opacity(0.3))
+                .frame(height: 1)
+
+            HStack(spacing: 0) {
+                ForEach(AppTab.allCases, id: \.rawValue) { tab in
+                    let config = tab.config
+                    TabBarButton(
+                        title: config.title,
+                        icon: config.icon,
+                        tag: tab.rawValue,
+                        isSelected: selectedTab == tab.rawValue,
+                        isEnabled: config.isEnabled,
+                        action: {
+                            if config.isEnabled {
+                                withAnimation(.spring()) {
+                                    selectedTab = tab.rawValue
+                                }
                             }
                         }
-                    }
-                )
+                    )
+                }
             }
+            .frame(height: 40)
+            .background(Color.forestGreen)
         }
-        .frame(height: 60)
-        .background(Color.forestGreen)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .padding(.horizontal, 8)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
@@ -58,6 +64,7 @@ struct TabBarButton: View {
             .foregroundColor(buttonColor)
             .opacity(isEnabled ? 1.0 : 0.4)
             .frame(maxWidth: .infinity)
+            .padding(.top, 14)
         }
         .disabled(!isEnabled)
     }
