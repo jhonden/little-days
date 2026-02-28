@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MainTabView: View {
     @State private var selectedTab = 0
@@ -13,6 +14,10 @@ struct MainTabView: View {
     @Namespace private var animation
     @State private var dragOffset: CGFloat = 0
     @State private var sidebarOffset: CGFloat = 0
+    @State private var hasTriggeredHaptic = false
+
+    // 触觉反馈生成器
+    private let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
 
     var body: some View {
         GeometryReader { geometry in
@@ -77,9 +82,18 @@ struct MainTabView: View {
                             if !isSettingsVisible && value.startLocation.x < 50 && value.translation.width > 0 {
                                 dragOffset = min(sidebarWidth, value.translation.width)
                                 sidebarOffset = -sidebarWidth + dragOffset
+
+                                // 触发震动反馈（只触发一次）
+                                if !hasTriggeredHaptic && dragOffset > 10 {
+                                    impactFeedback.impactOccurred()
+                                    hasTriggeredHaptic = true
+                                }
                             }
                         }
                         .onEnded { value in
+                            // 重置震动触发标记
+                            hasTriggeredHaptic = false
+
                             // 侧边栏关闭状态
                             if !isSettingsVisible && value.startLocation.x < 50 {
                                 let threshold = geometry.size.width * 0.15
@@ -101,6 +115,10 @@ struct MainTabView: View {
                 .onChange(of: geometry.size) { _ in
                     // 当屏幕尺寸变化时，重新初始化 sidebarOffset
                     sidebarOffset = isSettingsVisible ? 0 : -sidebarWidth
+                }
+                .onAppear {
+                    // 准备触觉反馈引擎
+                    impactFeedback.prepare()
                 }
 
                 // 遮罩层（设置面板展开时显示）
