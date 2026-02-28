@@ -17,43 +17,46 @@ struct MainTabView: View {
             ZStack(alignment: .leading) {
                 // 主内容 + TabBar
                 VStack(spacing: 0) {
-                    // 导航栏（带渐变背景）
-                    NavigationView {
-                        tabContent
-                            .navigationBarTitleDisplayMode(.inline)
-                            .toolbar {
-                                ToolbarItem(placement: .principal) {
-                                    HStack(spacing: 8) {
-                                        Image(systemName: "sun.max.fill")
-                                            .foregroundColor(.sunlightOrange)
-                                        Text("LittleDays")
-                                            .font(.headline)
-                                            .foregroundColor(.forestGreen)
-                                    }
-                                }
-                                ToolbarItem(placement: .navigationBarLeading) {
-                                    Button(action: {
-                                        withAnimation(.easeInOut(duration: 0.5)) {
-                                            isSettingsVisible.toggle()
-                                        }
-                                    }) {
-                                        Image(systemName: "sidebar.left")
-                                            .foregroundColor(.forestGreen)
-                                    }
-                                }
+                    // 固定导航栏
+                    HStack(spacing: 12) {
+                        // 侧边栏按钮
+                        Button(action: {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                isSettingsVisible.toggle()
                             }
-                            .background(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [
-                                        Color.morningLight,
-                                        Color.softYellow
-                                    ]),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .ignoresSafeArea(edges: .top)
+                        }) {
+                            Image(systemName: "line.3.horizontal")
+                                .font(.system(size: 20))
+                                .foregroundColor(.forestGreen)
+                        }
+
+                        // 标题
+                        HStack(spacing: 6) {
+                            Image(systemName: "sun.max.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(.sunlightOrange)
+                            Text("小日子")
+                                .font(.headline)
+                                .foregroundColor(.forestGreen)
+                        }
+
+                        Spacer()
                     }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                Color.morningLight,
+                                Color.softYellow
+                            ]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+
+                    // 主内容区域
+                    tabContent
 
                     Spacer()
 
