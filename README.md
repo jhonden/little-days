@@ -72,6 +72,29 @@ AIRepository 协议
 - iOS 17.0+
 - Swift 5.0+
 
+## 开发规范
+
+⚠️ **重要：在开始任何开发工作之前，必须阅读以下规范文档：**
+
+- [开发规范文档目录](./docs/standards/README.md) - 所有规范文档索引
+- [开发规范](./docs/standards/development-conventions.md) - Swift、SwiftUI、Core Data 等编码规范
+- [代码提交流程](./docs/standards/code-submission-workflow.md) - 代码验证和提交流程
+- [需求设计工作流程](./docs/standards/requirements-design-workflow.md) - 需求设计和实施流程
+- [项目关键约束](./docs/standards/project-constraints.md) - 技术栈、功能范围、工作流程约束
+
+### 快速导航
+
+**文档目录：**
+- [需求文档目录](./docs/requirements/README.md) - 已归档的需求设计文档
+- [模块设计文档目录](./docs/modules/README.md) - 各模块功能设计文档
+
+**关键文件：**
+- [App 入口](./LittleDays/LittleDays/LittleDaysApp.swift) - LittleDaysApp
+- [主 Tab 视图](./LittleDays/LittleDays/Views/MainTabView.swift) - MainTabView
+- [衣橱视图](./LittleDays/LittleDays/Wardrobe/WardrobeView.swift) - WardrobeView
+- [AI 服务抽象](./LittleDays/LittleDays/Wardrobe/Services/AIRepository.swift) - AIRepository
+- [衣服模型](./LittleDays/LittleDays/Wardrobe/Models/ClothingModels.swift) - ClothingModels
+
 ## License
 
 MIT
