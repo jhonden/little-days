@@ -119,6 +119,8 @@ struct MainTabView: View {
                 .onAppear {
                     // 准备触觉反馈引擎
                     impactFeedback.prepare()
+                    // 初始化侧边栏位置（关闭状态）
+                    sidebarOffset = -sidebarWidth
                 }
 
                 // 遮罩层（设置面板展开时显示）
