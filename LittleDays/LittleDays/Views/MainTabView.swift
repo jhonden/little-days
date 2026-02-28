@@ -64,31 +64,22 @@ struct MainTabView: View {
                 .background(Color.morningLight)
 
                 // 遮罩层（设置面板展开时显示）
-                if isSettingsVisible {
-                    Color.black.opacity(0.3)
-                        .ignoresSafeArea()
-                        .transition(.opacity)
-                        .onTapGesture {
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                isSettingsVisible = false
-                            }
+                Color.black.opacity(isSettingsVisible ? 0.3 : 0)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            isSettingsVisible = false
                         }
-                }
+                    }
 
                 // 设置面板（覆盖在主内容上）
-                if isSettingsVisible {
-                    HStack(spacing: 0) {
-                        SettingsPanel(isVisible: $isSettingsVisible)
-                            .frame(width: geometry.size.width * 0.45)
-                    }
-                    Spacer()
-                        .frame(width: geometry.size.width * 0.55)
-
-                    .transition(.asymmetric(
-                        insertion: .move(edge: .leading).combined(with: .opacity),
-                        removal: .move(edge: .leading).combined(with: .opacity)
-                    ))
+                HStack(spacing: 0) {
+                    SettingsPanel(isVisible: $isSettingsVisible)
+                        .frame(width: geometry.size.width * 0.45)
                 }
+                .frame(width: geometry.size.width * 0.45)
+                .offset(x: isSettingsVisible ? 0 : -geometry.size.width * 0.45)
+                .animation(.easeInOut(duration: 0.5), value: isSettingsVisible)
             }
         }
     }
